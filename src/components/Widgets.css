@@ -1,0 +1,13 @@
+.widgets{
+    flex: 0.4;
+    max-width: 350px;
+    padding: 10px;
+    color: white;
+}
+.widgets__wh{
+    background-color: #202020;
+    padding: 10px;
+    height: 50%;
+    border-radius: 20px;
+    margin: 0 auto;
+}
