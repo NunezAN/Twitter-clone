@@ -9,12 +9,16 @@ const TweetBox = () => {
         <div className="tweetBox__form--input--container">
           <Avatar src="https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large"></Avatar>
           <input
-            multiline={true}
             className="tweetBox__form--input"
             placeholder="What's happening?"
             type="text"
           />
         </div>
+          <input
+            className="tweetBox__form--Imageinput"
+            placeholder="Optional: Enter image URL"
+            type="text"
+          />
         <div className="tweetBox__form--button--container">
           <Button className="tweetBox__btn">Tweet</Button>
         </div>
