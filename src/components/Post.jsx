@@ -7,37 +7,33 @@ import RepeatOutlinedIcon from "@mui/icons-material/RepeatOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PublishIcon from "@mui/icons-material/Publish";
 
-const Post = (displayName, userName, verified, text, image, avatar) => {
+const Post = ({ displayName, userName, verified, text, image, avatar }) => {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Alex Nunez{" "}
+              {displayName}{" "}
               <span className="post__header--special">
-                <VerifiedIcon className="verified--icon" />
-                @HONCHO
+                {verified && <VerifiedIcon className="verified--icon" />}{" "}@
+                {userName}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>This is a tweet post🚀</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          className="post__img"
-          src="https://media4.giphy.com/media/h2NxCschQ81ltiL9HV/giphy.gif?cid=ecf05e470tcujvr3u0hx7zm1nneh06zqmicr0eawg0kint1x&rid=giphy.gif&ct=g"
-          alt=""
-        />
+        <img className="post__img" src={image} alt="" />
         <div className="post__footer">
-          <ModeCommentOutlinedIcon fontSize="smaill" />
-          <RepeatOutlinedIcon fontSize="smaill" />
-          <FavoriteBorderOutlinedIcon fontSize="smaill" />
-          <PublishIcon fontSize="smaill" />
+          <ModeCommentOutlinedIcon fontSize="small" />
+          <RepeatOutlinedIcon fontSize="small" />
+          <FavoriteBorderOutlinedIcon fontSize="small" />
+          <PublishIcon fontSize="small" />
         </div>
       </div>
     </div>
