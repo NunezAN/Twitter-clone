@@ -20,3 +20,8 @@
 .sidebarOption__active > .sidebarOption__title {
   font-weight: 900;
 }
+@media(max-width: 1290px) {
+  .sidebarOption__title{
+    display: none;
+  }
+}

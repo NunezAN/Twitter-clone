@@ -42,3 +42,8 @@
     font-weight: 700;
     margin: auto 0;
 }
+@media(max-width: 1180px) {
+  .widgets{
+    display: none;
+  }
+}

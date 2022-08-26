@@ -23,3 +23,8 @@
   width: 35px;
   margin-top: 5px;
 }
+@media(max-width: 1290px) {
+  .sidebar{
+    max-width: 100px;
+  }
+}
