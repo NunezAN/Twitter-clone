@@ -12,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    color: darkgray;
+    width: 85%;
 }
 .verified--icon{
     font-size:14px !important;

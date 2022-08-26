@@ -1,13 +1,39 @@
-.widgets{
-    flex: 0.4;
-    max-width: 350px;
-    padding: 10px;
-    color: white;
+.widgets {
+  flex: 0.4;
+  max-width: 350px;
+  padding: 10px;
+  color: white;
 }
 .widgets__wh{
-    background-color: #202020;
-    padding: 10px;
-    height: 50%;
-    border-radius: 20px;
-    margin: 0 auto;
+  margin-top: 20px;
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.widgets__input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom:20px;
+  background-color: #202020;
+}
+.widgets__SearchIcon {
+  color: var(--twitter-text-color);
+}
+.widgets__input--input {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+}
+.widgets__input--input::placeholder {
+  color: var(--twitter-text-color);
+}
+.widgets__wh--title{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
