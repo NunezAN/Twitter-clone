@@ -15,20 +15,27 @@ const TweetBox = () => {
   } = useForm();
 
   async function onSubmit(formData) {
-
+    const timestamp = new Date();
     const post = {
+    //   avatar: "https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large",
+    //   displayName: "Test User",
+    //   image: formData.image,
+    //   text: formData.tweet,
+    //   userName: "TestUser",
+    //   verified: false,
+    //   timestamp: timestamp,
       avatar: "https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large",
-      displayName: "Test User",
+      displayName: "Alex Nunez",
       image: formData.image,
       text: formData.tweet,
-      userName: "TestUser",
-      verified: false,
+      userName: "HONCHO",
+      verified: true,
+      timestamp: timestamp,
     };
     await addDoc(collection(db, "posts"), post);
 
     reset();
   }
-
 
   return (
     <div className="tweetBox">
@@ -41,16 +48,20 @@ const TweetBox = () => {
             type="text"
             {...register("tweet", { required: true })}
           />
-          {errors.tweet && <p className="tweetBox__form--error">Tweet is required</p>}
+          {errors.tweet && (
+            <p className="tweetBox__form--error">Tweet is required</p>
+          )}
         </div>
         <input
           className="tweetBox__form--Imageinput"
           placeholder="Optional: Enter image URL"
           type="text"
-          {...register("image", { required: false})}
+          {...register("image", { required: false })}
         />
         <div className="tweetBox__form--button--container">
-          <Button type="submit" className="tweetBox__btn">Tweet</Button>
+          <Button type="submit" className="tweetBox__btn">
+            Tweet
+          </Button>
         </div>
       </form>
     </div>

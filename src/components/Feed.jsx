@@ -1,4 +1,4 @@
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import "./Feed.css";
@@ -8,7 +8,7 @@ import TweetBox from "./TweetBox";
 const Feed = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    const q = collection(db, "posts");
+    const q = query(collection(db, "posts"),orderBy("timestamp", "desc"));
     onSnapshot(q, (snapshot) => {
       setPosts(
         snapshot.docs.map((elem) => ({ id: elem.id, data: elem.data() }))
