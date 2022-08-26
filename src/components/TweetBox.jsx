@@ -17,19 +17,12 @@ const TweetBox = () => {
   async function onSubmit(formData) {
     const timestamp = new Date();
     const post = {
-    //   avatar: "https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large",
-    //   displayName: "Test User",
-    //   image: formData.image,
-    //   text: formData.tweet,
-    //   userName: "TestUser",
-    //   verified: false,
-    //   timestamp: timestamp,
       avatar: "https://pbs.twimg.com/media/CmpIszlVMAAK1MK.jpg:large",
-      displayName: "Alex Nunez",
+      displayName: "Test User",
       image: formData.image,
       text: formData.tweet,
-      userName: "HONCHO",
-      verified: true,
+      userName: "TestUser",
+      verified: false,
       timestamp: timestamp,
     };
     await addDoc(collection(db, "posts"), post);
