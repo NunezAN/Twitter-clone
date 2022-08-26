@@ -37,3 +37,8 @@
     font-weight: 800;
     margin-bottom: 10px;
 }
+.tweetBox__form--error{
+    color: red;
+    font-weight: 700;
+    margin: auto 0;
+}
